@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use — Emerveil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-bg: #FDFBF7;
+            --color-text: #1A1A1A;
+            --color-text-secondary: #5C5C5C;
+            --color-accent: #2563EB;
+            --color-border: #E8E4DC;
+            --color-card: #FFFFFF;
+            --font-display: 'Fraunces', Georgia, serif;
+            --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            padding: 48px 0 32px;
+            text-align: center;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--color-text);
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+        }
+
+        .logo:hover {
+            opacity: 0.7;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        nav a {
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            font-size: 0.9375rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--color-accent);
+        }
+
+        /* Main Content */
+        main {
+            padding: 48px 0;
+        }
+
+        .page-header {
+            margin-bottom: 40px;
+        }
+
+        .page-header h1 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .last-updated {
+            font-size: 0.9375rem;
+            color: var(--color-text-secondary);
+        }
+
+        .intro {
+            font-size: 1.0625rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 40px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        section {
+            margin-bottom: 36px;
+        }
+
+        h2 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--color-text);
+        }
+
+        p {
+            color: var(--color-text-secondary);
+            margin-bottom: 16px;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        code {
+            background: rgba(0, 0, 0, 0.04);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.875rem;
+        }
+
+        a {
+            color: var(--color-accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact Box */
+        .contact-box {
+            background: var(--color-card);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 40px;
+        }
+
+        .contact-box h2 {
+            margin-bottom: 12px;
+        }
+
+        .contact-box p {
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        footer {
+            padding: 32px 0;
+            border-top: 1px solid var(--color-border);
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 16px;
+        }
+
+        .footer-links a {
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--color-accent);
+        }
+
+        .copyright {
+            font-size: 0.8125rem;
+            color: var(--color-text-secondary);
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .page-header h1 {
+                font-size: 1.75rem;
+            }
+
+            nav {
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="logo">Emerveil</a>
+        </header>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html" class="active">Terms</a>
+        </nav>
+
+        <main>
+            <div class="page-header">
+                <h1>Terms of Use</h1>
+                <p class="last-updated">Last updated: January 2026</p>
+            </div>
+
+            <p class="intro">These Terms of Use ("Terms") govern your use of Emerveil (the "App"). By downloading or using the App, you agree to these Terms.</p>
+
+            <section>
+                <h2>License</h2>
+                <p>You are granted a personal, non-exclusive, non-transferable license to use the App on Apple devices you own or control, in accordance with Apple's App Store rules.</p>
+            </section>
+
+            <section>
+                <h2>Subscriptions</h2>
+                <p>Emerveil offers paid subscriptions with monthly and yearly billing options.</p>
+                <p>Prices vary by region and currency and are displayed in the App Store before purchase.</p>
+                <p>Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current period.</p>
+                <p>You can manage or cancel subscriptions in <code>Settings → Apple ID → Subscriptions</code>.</p>
+            </section>
+
+            <section>
+                <h2>User Content</h2>
+                <p>All content you create in the App remains your property. You are responsible for your content and its accuracy.</p>
+            </section>
+
+            <section>
+                <h2>iCloud Sync</h2>
+                <p>If enabled, Emerveil may sync your data using Apple CloudKit. iCloud sync is provided by Apple and may be delayed or unavailable due to network or account conditions.</p>
+            </section>
+
+            <section>
+                <h2>Acceptable Use</h2>
+                <p>You agree not to:</p>
+                <p>• Misuse or attempt to disrupt the App<br>
+                • Reverse engineer or tamper with the App<br>
+                • Use the App in violation of applicable laws</p>
+            </section>
+
+            <section>
+                <h2>Disclaimer</h2>
+                <p>The App is provided "as is" without warranties of any kind. We do not guarantee uninterrupted or error-free operation.</p>
+            </section>
+
+            <section>
+                <h2>Limitation of Liability</h2>
+                <p>To the maximum extent permitted by law, Emerveil and its developer shall not be liable for any indirect, incidental, or consequential damages arising from the use of the App.</p>
+            </section>
+
+            <section>
+                <h2>Changes</h2>
+                <p>These Terms may be updated from time to time. Continued use of the App constitutes acceptance of the updated Terms.</p>
+            </section>
+
+            <div class="contact-box">
+                <h2>Contact</h2>
+                <p>Support email: <a href="mailto:uladliss@proton.me">uladliss@proton.me</a></p>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Use</a>
+                <a href="mailto:uladliss@proton.me">Contact</a>
+            </div>
+            <p class="copyright">© 2026 Emerveil</p>
+        </footer>
+    </div>
+</body>
+</html>
