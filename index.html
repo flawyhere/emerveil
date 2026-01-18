@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emerveil — Travel Manager for iOS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-bg: #FDFBF7;
+            --color-text: #1A1A1A;
+            --color-text-secondary: #5C5C5C;
+            --color-accent: #2563EB;
+            --color-wishlist: #F97316;
+            --color-project: #3B82F6;
+            --color-visited: #10B981;
+            --color-border: #E8E4DC;
+            --color-card: #FFFFFF;
+            --font-display: 'Fraunces', Georgia, serif;
+            --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            padding: 48px 0 32px;
+            text-align: center;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, var(--color-wishlist), var(--color-project));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tagline {
+            font-size: 1.125rem;
+            color: var(--color-text-secondary);
+            font-weight: 400;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        nav a {
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            font-size: 0.9375rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: var(--color-accent);
+        }
+
+        /* Main Content */
+        main {
+            padding: 48px 0;
+        }
+
+        section {
+            margin-bottom: 48px;
+        }
+
+        h2 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--color-text);
+        }
+
+        p {
+            color: var(--color-text-secondary);
+            margin-bottom: 16px;
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 32px 0 48px;
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .hero p {
+            font-size: 1.0625rem;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        /* Features */
+        .features {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .feature {
+            display: flex;
+            gap: 16px;
+            padding: 20px;
+            background: var(--color-card);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        .feature-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 1.25rem;
+        }
+
+        .feature-icon.wishlist {
+            background: rgba(249, 115, 22, 0.12);
+            color: var(--color-wishlist);
+        }
+
+        .feature-icon.project {
+            background: rgba(59, 130, 246, 0.12);
+            color: var(--color-project);
+        }
+
+        .feature-icon.visited {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--color-visited);
+        }
+
+        .feature-content h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .feature-content p {
+            font-size: 0.9375rem;
+            margin: 0;
+            color: var(--color-text-secondary);
+        }
+
+        /* Support Section */
+        .support-box {
+            background: var(--color-card);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .support-box h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .support-box p {
+            margin-bottom: 16px;
+        }
+
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--color-accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.2s ease;
+        }
+
+        .contact-link:hover {
+            opacity: 0.8;
+        }
+
+        /* FAQ */
+        .faq-item {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-item h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .faq-item p {
+            margin: 0;
+            font-size: 0.9375rem;
+        }
+
+        .faq-item code {
+            background: rgba(0, 0, 0, 0.04);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.875rem;
+        }
+
+        /* Footer */
+        footer {
+            padding: 32px 0;
+            border-top: 1px solid var(--color-border);
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 16px;
+        }
+
+        .footer-links a {
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--color-accent);
+        }
+
+        .copyright {
+            font-size: 0.8125rem;
+            color: var(--color-text-secondary);
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 2rem;
+            }
+
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+
+            nav {
+                gap: 20px;
+            }
+
+            .feature {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Emerveil</div>
+            <p class="tagline">Travel Manager for iOS</p>
+        </header>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+        </nav>
+
+        <main>
+            <section class="hero">
+                <h1>Plan journeys.<br>Collect memories.</h1>
+                <p>A travel companion designed for real trips — where places, plans, and memories come together.</p>
+            </section>
+
+            <section>
+                <h2>How It Works</h2>
+                <div class="features">
+                    <div class="feature">
+                        <div class="feature-icon wishlist">★</div>
+                        <div class="feature-content">
+                            <h3>Wishlist</h3>
+                            <p>Save places you dream of visiting. Key destinations your trips are built around.</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon project">◈</div>
+                        <div class="feature-content">
+                            <h3>Project</h3>
+                            <p>Turn dreams into plans. Shortlist places, add notes, and build day-by-day itineraries.</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon visited">✓</div>
+                        <div class="feature-content">
+                            <h3>Visited</h3>
+                            <p>Mark places when your trip ends. Build your personal travel history over time.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Support</h2>
+                <div class="support-box">
+                    <h3>Need Help?</h3>
+                    <p>Questions, feedback, or bug reports — we're here to help.</p>
+                    <a href="mailto:uladliss@proton.me" class="contact-link">
+                        <span>✉</span> uladliss@proton.me
+                    </a>
+                </div>
+            </section>
+
+            <section>
+                <h2>Common Questions</h2>
+                <div class="faq-item">
+                    <h3>iCloud Sync</h3>
+                    <p>Sync may take some time after first launch. Enable or disable in <code>Settings → Apple ID → iCloud → Emerveil</code>.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Subscriptions</h3>
+                    <p>Managed by Apple. To view or cancel: <code>Settings → Apple ID → Subscriptions</code>.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Reporting Issues</h3>
+                    <p>When reporting a bug, please include your device model, iOS version, app version, and steps to reproduce.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Use</a>
+                <a href="mailto:uladliss@proton.me">Contact</a>
+            </div>
+            <p class="copyright">© 2026 Emerveil</p>
+        </footer>
+    </div>
+</body>
+</html>
