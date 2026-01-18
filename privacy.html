@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Emerveil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-bg: #FDFBF7;
+            --color-text: #1A1A1A;
+            --color-text-secondary: #5C5C5C;
+            --color-accent: #2563EB;
+            --color-border: #E8E4DC;
+            --color-card: #FFFFFF;
+            --font-display: 'Fraunces', Georgia, serif;
+            --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            padding: 48px 0 32px;
+            text-align: center;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--color-text);
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+        }
+
+        .logo:hover {
+            opacity: 0.7;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        nav a {
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            font-size: 0.9375rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--color-accent);
+        }
+
+        /* Main Content */
+        main {
+            padding: 48px 0;
+        }
+
+        .page-header {
+            margin-bottom: 40px;
+        }
+
+        .page-header h1 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .last-updated {
+            font-size: 0.9375rem;
+            color: var(--color-text-secondary);
+        }
+
+        .intro {
+            font-size: 1.0625rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 40px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        section {
+            margin-bottom: 36px;
+        }
+
+        h2 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--color-text);
+        }
+
+        p {
+            color: var(--color-text-secondary);
+            margin-bottom: 16px;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        code {
+            background: rgba(0, 0, 0, 0.04);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.875rem;
+        }
+
+        a {
+            color: var(--color-accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact Box */
+        .contact-box {
+            background: var(--color-card);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 40px;
+        }
+
+        .contact-box h2 {
+            margin-bottom: 12px;
+        }
+
+        .contact-box p {
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        footer {
+            padding: 32px 0;
+            border-top: 1px solid var(--color-border);
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 16px;
+        }
+
+        .footer-links a {
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--color-accent);
+        }
+
+        .copyright {
+            font-size: 0.8125rem;
+            color: var(--color-text-secondary);
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .page-header h1 {
+                font-size: 1.75rem;
+            }
+
+            nav {
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="logo">Emerveil</a>
+        </header>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="privacy.html" class="active">Privacy</a>
+            <a href="terms.html">Terms</a>
+        </nav>
+
+        <main>
+            <div class="page-header">
+                <h1>Privacy Policy</h1>
+                <p class="last-updated">Last updated: January 2026</p>
+            </div>
+
+            <p class="intro">This Privacy Policy explains how Emerveil ("the App") handles information when you use it.</p>
+
+            <section>
+                <h2>Data We Collect</h2>
+                <p>Emerveil does not collect personal information such as your name, email address, phone number, or precise location.</p>
+            </section>
+
+            <section>
+                <h2>Data You Create in the App</h2>
+                <p>All content you create in the App (including places, lists, notes, and projects) is stored locally on your device.</p>
+                <p>If you enable iCloud sync, this content may also be stored in your private iCloud database using Apple CloudKit to synchronize data across your devices.</p>
+            </section>
+
+            <section>
+                <h2>iCloud / CloudKit</h2>
+                <p>When iCloud sync is enabled:</p>
+                <p>• Your data is synced via Apple CloudKit.<br>
+                • The developer does not have access to your iCloud data.<br>
+                • Sync behavior depends on your Apple ID, iCloud availability, and network connection.</p>
+                <p>You can disable iCloud access for Emerveil at any time in <code>Settings → Apple ID → iCloud → Emerveil</code>.</p>
+            </section>
+
+            <section>
+                <h2>Purchases and Subscriptions</h2>
+                <p>The App uses Apple's In-App Purchase system for paid features.</p>
+                <p>All payments are processed by Apple through the user's Apple ID. The App does not collect, store, or have access to any payment or credit card information.</p>
+            </section>
+
+            <section>
+                <h2>Analytics and Tracking</h2>
+                <p>Emerveil does not use third-party analytics SDKs and does not track users across apps or websites.</p>
+            </section>
+
+            <section>
+                <h2>Data Deletion</h2>
+                <p>You can delete your data at any time by removing it within the App or by deleting the App from your device.</p>
+                <p>If iCloud sync is enabled, data may remain in iCloud until managed or removed through iOS iCloud settings.</p>
+            </section>
+
+            <section>
+                <h2>Changes to This Policy</h2>
+                <p>This Privacy Policy may be updated from time to time. The latest version will always be available at this URL with an updated "Last updated" date.</p>
+            </section>
+
+            <div class="contact-box">
+                <h2>Contact</h2>
+                <p>Support email: <a href="mailto:uladliss@proton.me">uladliss@proton.me</a></p>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Use</a>
+                <a href="mailto:uladliss@proton.me">Contact</a>
+            </div>
+            <p class="copyright">© 2026 Emerveil</p>
+        </footer>
+    </div>
+</body>
+</html>
